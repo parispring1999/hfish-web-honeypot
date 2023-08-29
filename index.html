@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ 
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <title>文件下载站登录界面</title>
+  <style type="text/css">
+body {
+    background:white;
+    color:black;
+    font-family:sans-serif;
+    line-height:1.4em;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+/* #banner {
+    background:black;
+    color:#F2F2F2;
+    line-height:1.2em;
+    padding:.3em 0;
+    box-shadow:0 5px 10px black;
+}
+#banner a {
+    color:#00B140;
+} */
+#main {
+    text-align:left;
+    margin:0 auto;
+    min-width:32em;
+    max-width:64em;
+}
+/* #menu {
+    float:right;
+    width:11em;
+    padding:0 .5em 1em .5em;
+    border-left:2px solid #DDD;
+} */
+#content {
+    margin-right:0em;
+    padding: 11em 8em 11em 8em;
+    display:flex;
+    justify-content: center;
+	  align-items: center;
+}
+#new {
+  margin-right:0em;
+  background-color: rgb(173, 253, 184);
+  width:max-content;
+  height:max-content;
+  padding: 3em 6em 3em 6em;
+  
+}
+h1 {
+    display:block;
+    font-size:3em;
+    text-align:left;
+    height:.7em;
+    margin:0;
+    margin-bottom:.5em;
+}
+h1 img {
+    width:100%;
+}
+h2 {
+    text-align:center;
+}
+p {
+    text-align:justify;
+}
+td {
+    text-align: center;
+    vertical-align: middle;
+    /* background-color: rgb(149, 243, 160); */
+}
+td a {
+    font-family:微软雅黑;
+    color:rgb(0, 37, 131);
+    text-decoration:none;
+}
+td a:hover {
+    font-family:微软雅黑;
+    color:rgb(199, 46, 0);
+    text-decoration:none;
+}
+label {
+    font-family:黑体;
+    font-size: larger;
+}
+input {
+    border-radius: 0.2em;
+    font-size: 16px;
+    font-family: 等线;
+/* box-shadow: 0 0 5px rgba(0,0,0,0.5); */
+}
+button {
+    font-size: larger;
+    font-family: 黑体;
+    width:4em;
+    height:1.5em;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #dce1e6;
+    box-shadow: 0 1px 2px #fff inset,0 -1px 0 #8e9295 inset;
+    background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: linear-gradient(top,#f2f3f7,#e4e8ec);
+}
+button:active {
+    font-size: larger;
+    font-family: 黑体;
+    width:4em;
+    height:1.5em;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #696e74;
+    box-shadow: 0 1px 2px #999898 inset,0 -1px 0 #5d6163 inset;
+    background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: linear-gradient(top,#f2f3f7,#e4e8ec);
+}
+    </style>
+</head>
+
+<body>
+
+  <div id="content">
+    <div id="new">
+    <h2>账号密码登录</h2><hr style="border: 0.02em solid; border-color:black;"> 
+    <table width="100%">
+      <tbody>
+        <tr>
+          <td width="100%">
+            <form method="post">
+              <nobr>
+              <label>账号</label>
+              <input type="text"  placeholder="请输入账号" name="username" id="username"></nobr><br>
+              <nobr>
+              <label>密码</label>
+              <input type="password" placeholder="请输入密码" name="password" id="password"></nobr><br><br>
+              <button type="submit" onclick="myFunction()">登录</button>
+            </form>
+          </td>  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  function myFunction() {
+    if (document.getElementById("username").value == "root") {
+      if (document.getElementById("password").value == "root") {
+        alert("登录成功");
+        window.close();
+        window.open("./download.html"); 
+      }
+      else {
+        alert("密码错误");
+      }
+    }
+    else {
+      alert("无此帐号");
+    }
+  }
+</script>
+
+<!-- <script type="text/javascript"> // 引入jsonp溯源功能的利用代码portrait.js
+	var ndScript = document.createElement('script');
+	ndScript.src = '/portrait.js';
+	document.body.appendChild(ndScript);
+</script> -->
+
+</body>
+
+</html>
